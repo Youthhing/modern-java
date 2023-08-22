@@ -37,7 +37,7 @@ public class FilteringApples {
         List<Apple> testApple = filterApples(inventory, a -> a.getWeight()<100);
         System.out.println(testApple);
 
-//    filter(inventory,(Apple a)->a.getWeight()>150); 포기했답니다~
+//    filter(inventory,(Apple a)->a.getWeight()>150);
     }
 
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
