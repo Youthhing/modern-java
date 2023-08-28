@@ -10,9 +10,13 @@ public class Ques19 {
     public static void main(String[] args) {
         List<Integer> numberList = Arrays.asList(1,2,3,4,5);
 
-        numberList.sort((x,y)->x.compareTo(y));
-        System.out.println(numberList.get(1));// Todo 수정해야겠지?
+        Integer first = numberList.stream()
+                .sorted()
+                .skip(1)
+                .findFirst()
+                .orElse(null);
 
+        System.out.println(first);
 
         Integer secondLarge = numberList.stream()
                 .sorted(Comparator.reverseOrder())
